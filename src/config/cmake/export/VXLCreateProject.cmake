@@ -42,13 +42,13 @@ if(VXLTargets_MODULES)
 endif()
 
 # Create the VXLConfig.cmake file for the build tree.
-configure_file(${VXL_CMAKE_DIR}/${VXL_EXPORT_PREFIX}Config.cmake.in
+configure_file(${VXL_CMAKE_DIR}/VXLConfig.cmake.in
                ${PROJECT_BINARY_DIR}/${VXL_EXPORT_PREFIX}Config.cmake @ONLY)
-configure_file(${VXL_CMAKE_DIR}/${VXL_EXPORT_PREFIX}ConfigVersion.cmake.in
+configure_file(${VXL_CMAKE_DIR}/VXLConfigVersion.cmake.in
                ${PROJECT_BINARY_DIR}/${VXL_EXPORT_PREFIX}ConfigVersion.cmake @ONLY)
 
 configure_file(${VXL_CMAKE_DIR}/VXLConfig_export.cmake.in
-               ${PROJECT_BINARY_DIR}/config/cmake/export/${VXL_EXPORT_PREFIX}Config.cmake
+               ${PROJECT_BINARY_DIR}/config/cmake/export/VXLConfig.cmake
                @ONLY)
 
 install(FILES
