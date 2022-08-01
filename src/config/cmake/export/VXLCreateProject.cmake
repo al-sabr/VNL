@@ -48,12 +48,12 @@ configure_file(${VXL_CMAKE_DIR}/VXLConfigVersion.cmake.in
                ${PROJECT_BINARY_DIR}/${VXL_EXPORT_PREFIX}ConfigVersion.cmake @ONLY)
 
 configure_file(${VXL_CMAKE_DIR}/VXLConfig_export.cmake.in
-               ${PROJECT_BINARY_DIR}/config/cmake/export/VXLConfig.cmake
+               ${PROJECT_BINARY_DIR}/config/cmake/export/${VXL_EXPORT_PREFIX}Config.cmake
                @ONLY)
 
 install(FILES
-  ${PROJECT_BINARY_DIR}/config/cmake/export/VXLConfig.cmake
-  ${PROJECT_BINARY_DIR}/VXLConfigVersion.cmake
+  ${PROJECT_BINARY_DIR}/config/cmake/export/${VXL_EXPORT_PREFIX}Config.cmake
+  ${PROJECT_BINARY_DIR}/${VXL_EXPORT_PREFIX}ConfigVersion.cmake
   ${VXL_CMAKE_DIR}/VXLStandardOptions.cmake
   ${VXL_CMAKE_DIR}/UseVXL.cmake
   ${VXL_CMAKE_DIR}/UseVGUI.cmake
