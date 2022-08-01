@@ -181,5 +181,5 @@ set(VXL_CONFIG_CMAKE 1)
 # Import VXL targets.
 if(NOT VXL_TARGETS_IMPORTED)
   set(VXL_TARGETS_IMPORTED 1)
-  include("${CMAKE_CURRENT_LIST_DIR}/VXLTargets.cmake")
+  include("${CMAKE_CURRENT_LIST_DIR}/${VXL_EXPORT_PREFIX}Targets.cmake")
 endif()
