@@ -21,7 +21,10 @@ set(VXL_CMAKE_DOXYGEN_DIR  ${VXL_ROOT_SOURCE_DIR}/config/cmake/doxygen)
 
 get_property(VXLTargets_MODULES GLOBAL PROPERTY VXLTargets_MODULES)
 
-set(VXL_CONFIG_CMAKE_DIR "share/vxl/cmake")
+if(NOT DEFINED VXL_CONFIG_CMAKE_DIR)
+  set(VXL_CONFIG_CMAKE_DIR "share/vxl/cmake")
+endif()
+
 set(INTERFACE_LINK_OPTION "EXPORT_LINK_INTERFACE_LIBRARIES")
 
 if(VXLTargets_MODULES)
