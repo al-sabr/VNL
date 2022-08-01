@@ -7,7 +7,7 @@ set(ITKVNL_THIRD_PARTY 1)
   set(VNL_CONFIG_LEGACY_METHODS     OFF CACHE BOOL "Whether backward-compatibility methods are provided by vnl." FORCE )
   set(VXL_BUILD_CORE_NUMERICS       ON  CACHE BOOL "VXL configuration for ITK" FORCE )
   set(VXL_BUILD_CORE_NUMERICS_ONLY  ON  CACHE BOOL "VXL configuration for ITK" FORCE ) #This hides other VXL core options from CMake
-  set(VXL_NO_EXPORT                 ON  CACHE BOOL "VXL configuration for ITK" FORCE )
+  set(VXL_NO_EXPORT                 FALSE  CACHE BOOL "VXL configuration for ITK" FORCE )
   set(VXL_BUILD_CORE_GEOMETRY       OFF CACHE BOOL "VXL configuration for ITK" FORCE )
   set(VXL_BUILD_CORE_IMAGING        OFF CACHE BOOL "VXL configuration for ITK" FORCE )
   set(VXL_BUILD_CORE_IMAGING        OFF CACHE BOOL "VXL configuration for ITK" FORCE )
