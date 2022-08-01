@@ -25,6 +25,10 @@ if(NOT DEFINED VXL_CONFIG_CMAKE_DIR)
   set(VXL_CONFIG_CMAKE_DIR "share/vxl/cmake")
 endif()
 
+if(NOT DEFINED VXL_EXPORT_PREFIX)
+  set(VXL_EXPORT_PREFIX "VXL")
+endif()
+
 set(INTERFACE_LINK_OPTION "EXPORT_LINK_INTERFACE_LIBRARIES")
 
 if(VXLTargets_MODULES)
@@ -38,13 +42,13 @@ if(VXLTargets_MODULES)
 endif()
 
 # Create the VXLConfig.cmake file for the build tree.
-configure_file(${VXL_CMAKE_DIR}/VXLConfig.cmake.in
-               ${PROJECT_BINARY_DIR}/VXLConfig.cmake @ONLY)
-configure_file(${VXL_CMAKE_DIR}/VXLConfigVersion.cmake.in
-               ${PROJECT_BINARY_DIR}/VXLConfigVersion.cmake @ONLY)
+configure_file(${VXL_CMAKE_DIR}/${VXL_EXPORT_PREFIX}Config.cmake.in
+               ${PROJECT_BINARY_DIR}/${VXL_EXPORT_PREFIX}Config.cmake @ONLY)
+configure_file(${VXL_CMAKE_DIR}/${VXL_EXPORT_PREFIX}ConfigVersion.cmake.in
+               ${PROJECT_BINARY_DIR}/${VXL_EXPORT_PREFIX}ConfigVersion.cmake @ONLY)
 
 configure_file(${VXL_CMAKE_DIR}/VXLConfig_export.cmake.in
-               ${PROJECT_BINARY_DIR}/config/cmake/export/VXLConfig.cmake
+               ${PROJECT_BINARY_DIR}/config/cmake/export/${VXL_EXPORT_PREFIX}Config.cmake
                @ONLY)
 
 install(FILES
